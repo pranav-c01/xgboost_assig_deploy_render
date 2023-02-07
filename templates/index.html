@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Your Wage class</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="number" name="native_country" id="native_country" placeholder="native_country(expec_range => [0-41])">
+            <input type="number" name="hours_per_week" id="hours_per_week" placeholder="hours_per_week">
+            <input type="number" name="capital_loss" id="capital_loss" placeholder="capital_loss">
+            <input type="number" name="capital_gain" id="capital_gain" placeholder="capital_gain">
+            <input type="number" name="sex" id="sex" placeholder="sex(expec_values => [0,1])">
+            <input type="number" name="educ" id="occupation" placeholder="occupation(expec_range => [0,14])">
+            <input type="number" name="education_num" id="education_num" placeholder="education_num(expec_range => [1,16])">
+            <input type="number" name="workclass" id="workclass" placeholder="workclass(expec_range => [0,8])">
+            
+            
+  
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
