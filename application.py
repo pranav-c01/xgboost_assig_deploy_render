@@ -1,5 +1,5 @@
 # from wsgiref import simple_server
-from flask import Flask, request, app
+# from flask import Flask, request, app
 from flask import Response
 from flask_cors import CORS
 from logistic_deploy import predObj
