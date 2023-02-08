@@ -1,12 +1,12 @@
 # from wsgiref import simple_server
 # from flask import Flask, request, app
 from flask import Response
-from flask_cors import CORS
+# from flask_cors import CORS
 from logistic_deploy import predObj
 
 # importing the necessary dependencies
 from flask import Flask, render_template, request
-from flask_cors import cross_origin
+# from flask_cors import cross_origin
 import pickle
 
 
@@ -15,7 +15,7 @@ application = Flask(__name__)
 # application.config['DEBUG'] = True
 
 @application.route('/',methods=['GET'])  # route to display the home page
-@cross_origin()
+# @cross_origin()
 def homePage():
     return render_template("index.html")
 
